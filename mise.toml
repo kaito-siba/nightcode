@@ -1,2 +1,2 @@
 [tools]
-bun = "latest"
+bun = "prefix:1.3"

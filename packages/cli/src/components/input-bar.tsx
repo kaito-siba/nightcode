@@ -41,7 +41,7 @@ export function InputBar({ onSubmit, disabled = false }: Props) {
 
     handleContentChange(textarea.plainText);
 
-  }, [])
+  }, [handleContentChange])
 
   const handleSubmit = useCallback(() => {
     if (disabled) return;
@@ -72,7 +72,7 @@ export function InputBar({ onSubmit, disabled = false }: Props) {
     } else {
       textarea.insertText(command.value + " ");
     }
-  }, []);
+  }, [renderer]);
 
   const handleCommandExecute = useCallback((index: number) => {
     const command = resolveCommand(index);
